@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
+
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 0;
+  padding-top: 70px;
+  background-color: var(--secondary-color);
+}
+
+
+.banner {
+  background: #eee;
+  text-align: center;
+
+  h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+}
+

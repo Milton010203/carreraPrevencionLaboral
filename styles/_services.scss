@@ -1,0 +1,47 @@
+.services {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  .service-list {
+    display: flex;
+    justify-content: center;
+    gap: 12rem;
+    margin-top: 2rem;
+  }
+
+  .service {
+    max-width: 50rem;
+
+    .icon {
+      width: 10rem;
+      height: 10rem;
+      margin: 0 auto 1rem;
+      background: var(--primary-color);
+    }
+    .circle { border-radius: 50%; }
+    .triangle {
+      width: 10rem;
+      height: 10rem;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 60px solid var(--primary-color);
+      background: none;
+    }
+  }
+
+  .btn {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+    background: var(--hover-color);
+  }
+}
