@@ -7,6 +7,7 @@
   max-width: 98rem;
   margin: 0 auto;
   border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   .info-header {
     display: flex;
@@ -28,14 +29,31 @@
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid #4a6fa5;
 
     p {
       flex: 1 1 300px;
-      font-size: 1rem;
+      font-size: 1.3rem;
       line-height: 1.6;
-      text-align: justify;
     }
   }
+}
+
+.director-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: var(--spacing-md);
+}
+
+div>h4 {font-weight: normal; margin-top: 0.5rem;}
+.secciondirector {
+  margin-top: var(--spacing-lg);
+  border-bottom: 2px solid #4a6fa5;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Responsive

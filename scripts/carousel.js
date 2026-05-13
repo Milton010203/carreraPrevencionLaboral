@@ -24,7 +24,7 @@ function prevSlide() {
 }
 
 function startAutoPlay() {
-  autoPlayInterval = setInterval(nextSlide, 5000);
+  autoPlayInterval = setInterval(nextSlide, 60000);
 }
 
 function stopAutoPlay() {
