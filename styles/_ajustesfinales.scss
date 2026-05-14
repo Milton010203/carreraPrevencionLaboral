@@ -1,0 +1,36 @@
+.container, .info, .servicios, .service-list {
+  max-width: 100%;
+  overflow-x: hidden; // evita scroll horizontal
+}
+
+@media screen and (max-width: 768px) {
+  .servicios, .service-list, .bloques {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+}
+
+img, .logo-footer, .info-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .tarjeta {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1.5em;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+    max-width: 95%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5em;
+  }
+}

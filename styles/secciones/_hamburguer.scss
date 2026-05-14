@@ -1,0 +1,95 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5em; // más compacto
+  background: linear-gradient(
+    135deg,
+    #1e3a5fe7 0%,
+    #2c558ae5 25%,
+    #5a84bbe5 50%,
+    #4070afe5 75%,
+    #2c558ae7 90%,
+    #1e3a5fe8 100%
+  );
+  background-size: 200% 200%;
+  animation: shine 10s ease-in-out infinite;
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  z-index: 1000;
+
+  .logo {
+    font-size: 1.5rem; // más chico
+    width: auto;
+    min-width: 80px;
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2em;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Botón hamburguesa
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  }
+}
+
+// 📱 Responsive para móviles
+@media screen and (max-width: 768px) {
+  .header {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header .logo {
+    font-size: 1.2rem;
+  }
+
+  .header .nav ul {
+    display: none; // oculto por defecto
+    flex-direction: column;
+    background: #1e3a5f;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  .header .nav ul.active {
+    display: flex; // se muestra al activar
+  }
+
+  .header .hamburger {
+    display: flex; // aparece en mobile
+  }
+}

@@ -1,20 +1,19 @@
 
 //background: linear-gradient(to top, rgba(69, 85, 146, 0.959), var(--colornav));
-
 .header {
   position: fixed;
   top: 0;                  
   left: 0;
   right: 0;
-  height: 6rem;
+  height: 6em; // antes 6rem → relativo
   background: linear-gradient(
     135deg,
-    #1e3a5fe7 0%,   // gris oscuro
-    #2c558ae5 25%,  // gris medio
-    #5a84bbe5 50%,  // gris claro
-    #4070afe5 75%,  // gris plata
-    #2c558ae7 90%,  // gris muy claro
-    #1e3a5fe8 100%  // toque azulado para reflejo
+    #1e3a5fe7 0%,
+    #2c558ae5 25%,
+    #5a84bbe5 50%,
+    #4070afe5 75%,
+    #2c558ae7 90%,
+    #1e3a5fe8 100%
   );
   background-size: 200% 200%;
   animation: shine 10s ease-in-out infinite;
@@ -22,19 +21,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--spacing-md);
+  padding: 0 1.5em; // antes var(--spacing-md)
   z-index: 1000;
+
   @keyframes shine {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
   .logo {
     display: flex;
     align-items: center;
     font-size: 2rem;
-    width: 25%;
+    width: 20%; // antes 25% → más compacto
+    min-width: 120px; // evita que se achique demasiado
   }
 
   .nav {
@@ -44,8 +45,9 @@
     ul {
       display: flex;
       list-style: none;
-      gap: 4rem;
+      gap: 2em; // antes 4rem → más flexible
       padding: 0;
+      margin: 0;
     }
 
     li {
@@ -62,11 +64,9 @@
           position: absolute;
           left: 50%;
           bottom: -3px;
-
           width: 0;
           height: 2px;
           background: #fff;
-
           transform: translateX(-50%);
           transition: width 0.2s ease;
         }
@@ -81,4 +81,25 @@
 
 nav ul li:hover {
   transform: scale(1.07);
+}
+
+// 📱 Responsive para móviles
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+    text-align: center;
+  }
+
+  .header .logo {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+
+  .header .nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
 }
