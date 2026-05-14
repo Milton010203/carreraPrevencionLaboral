@@ -11,6 +11,11 @@ body {
   background-color: var(--secondary-color);
 }
 
+main {
+  opacity: 0;
+  transition: opacity 1s ease; // velocidad del fade in
+}
+
 
 .banner {
   text-align: center;
