@@ -26,13 +26,13 @@
       align-items: center;
       height: 100%;
       position: absolute;
-      top: 0%;
-      left: 10%;
-      right: 10%;
+      top: 0;
+      left: 5%;   // antes 10% → más flexible
+      right: 5%;
       color: white;
-      font-size: 3rem;
+      font-size: 2.5rem; // más moderado
       font-weight: bold;
-      text-align: left;
+      text-align: center; // centrado en móviles
       line-height: 1.4;
       z-index: 2;
     }
@@ -48,7 +48,7 @@
     color: var(--secondary-color);
     border: none;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1em; // antes 1.2rem → relativo
     border-radius: 50%;
     transition: background 0.3s ease;
     z-index: 3;
@@ -63,7 +63,7 @@
 
   .indicators {
     position: absolute;
-    bottom: 15px;
+    bottom: 1em; // antes 15px → relativo
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -71,8 +71,8 @@
     z-index: 3;
 
     .dot {
-      width: 12px;
-      height: 12px;
+      width: 0.75em; // antes 12px
+      height: 0.75em;
       background: var(--overlay-color);
       border-radius: 50%;
       cursor: pointer;
@@ -89,3 +89,24 @@
   }
 }
 
+// 📱 Ajustes responsive para móviles
+@media screen and (max-width: 768px) {
+  .carousel .caption {
+    font-size: 1.2rem; // más chico en celulares
+    left: 2%;
+    right: 2%;
+    text-align: center;
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    width: 2em;
+    height: 2em;
+    font-size: 0.9em;
+  }
+
+  .carousel .indicators .dot {
+    width: 0.6em;
+    height: 0.6em;
+  }
+}

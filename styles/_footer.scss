@@ -2,19 +2,19 @@
   background: var(--colorfooter);
   color: #fff;
   text-align: left;
-  padding: 1rem;
-  display: inline-flex;
+  padding: 1em; // antes 1rem
+  display: flex; // inline-flex → flex
   flex-direction: row;
-  font-size: 0.8rem;
+  font-size: 0.8rem; // tipografía en rem
   margin: 0;
   background: linear-gradient(
     135deg,
-    #1e3a5f 0%,   // gris oscuro
-    #2c548a 25%,  // gris medio
-    #4b76ad 50%,  // gris claro
-    #3668aa 75%,  // gris plata
-    #2c548a 90%,  // gris muy claro
-    #1e3a5f 100%  // toque azulado para reflejo
+    #1e3a5f 0%,
+    #2c548a 25%,
+    #4b76ad 50%,
+    #3668aa 75%,
+    #2c548a 90%,
+    #1e3a5f 100%
   );
   background-size: 200% 200%;
   animation: shine 10s ease-in-out infinite;
@@ -27,19 +27,44 @@
 }
 
 .container {
-  max-width: 105rem;
-  margin-left: 1.5rem;
+  max-width: 95%; // antes 105rem → flexible
+  margin-left: 1.5em; // antes 1.5rem
 }
+
 .logo-footer {
-  width: 10%;
+  width: 15%;
   border-right: 2px solid white;
 }
 
 .margenchico {
-  margin: 0.5rem 0rem;
-  a{
+  margin: 0.5em 0; // antes 0.5rem
+  a {
     color: #fff;
     text-decoration: none;
   }
-  
+}
+
+// 📱 Responsive para móviles
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column; // apila el contenido
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5em;
+  }
+
+  .container {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .logo-footer {
+    width: 40%; // más grande en móviles
+    border-right: none;
+    margin: 0 auto 1em;
+  }
+
+  .margenchico {
+    margin: 0.8em 0;
+  }
 }

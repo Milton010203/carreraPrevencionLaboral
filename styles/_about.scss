@@ -1,10 +1,9 @@
-
 .info {
   text-align: center;
   padding: var(--spacing-md);
   background-color: var(--cardscolor);
   color: var(--text-color);
-  max-width: 98rem;
+  max-width: 95%; // antes 98rem → ahora flexible
   margin: 0 auto;
   border-radius: var(--border-radius);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -15,9 +14,9 @@
     align-items: center;
 
     .info-logo {
-      max-width: 400px;
+      max-width: 25em; // antes 400px → relativo
       width: 100%;
-      height: 20%;
+      height: auto; // antes 20% → mejor automático
       border-radius: var(--border-radius);
     }
   }
@@ -27,31 +26,35 @@
     justify-content: center;
     gap: var(--spacing-md);
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 90%; // antes 1000px → flexible
     margin: 0 auto;
     text-align: center;
     border-bottom: 2px solid var(--text-color);
 
     p {
-      flex: 1 1 300px;
-      font-size: 1.3rem;
+      flex: 1 1 250px; // antes 300px → más adaptable
+      font-size: 1.2rem; // tipografía en rem
       line-height: 1.6;
     }
   }
 }
 
 .director-photo {
-  width: 150px;
-  height: 150px;
+  width: 9em;   // antes 150px
+  height: 9em;  // antes 150px
   border-radius: 50%;
   margin-top: var(--spacing-md);
 }
 
-div>h4 {font-weight: normal; margin-top: 0.5rem;}
+div > h4 {
+  font-weight: normal;
+  margin-top: 0.5em; // antes 0.5rem
+}
+
 .secciondirector {
   margin-top: var(--spacing-lg);
   border-bottom: 2px solid var(--text-color);
-  max-width: 1000px;
+  max-width: 90%; // antes 1000px
   margin-left: auto;
   margin-right: auto;
 }
@@ -60,7 +63,7 @@ div>h4 {font-weight: normal; margin-top: 0.5rem;}
 @media (max-width: var(--breakpoint-md)) {
   .info {
     .info-logo {
-      max-width: 250px;
+      max-width: 15em; // antes 250px
     }
 
     .columns {
@@ -69,7 +72,13 @@ div>h4 {font-weight: normal; margin-top: 0.5rem;}
 
       p {
         text-align: center;
+        font-size: 1rem; // más chico en móviles
       }
     }
+  }
+
+  .director-photo {
+    width: 7em;
+    height: 7em;
   }
 }

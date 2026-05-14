@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
 
-
 body {
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
@@ -16,19 +15,18 @@ main {
   transition: opacity 1s ease; // velocidad del fade in
 }
 
-
 .banner {
   text-align: center;
-  margin: 6rem 0rem;
+  margin: 6em 0; // antes estaba en rem → ahora relativo al propio texto
   font-family: 'Noto Sans', sans-serif;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.5rem; // mantenemos rem para tipografía
 
   h1 {
     display: inline-block;
-    max-width: 80rem;
+    max-width: 80%; // antes 80rem → ahora flexible
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 4rem; // tipografía sigue en rem
     color: var(--text-color);
     font-style: italic;
     margin: 0;
@@ -42,7 +40,6 @@ main {
   }
 }
 
-
 body {
   margin: 0;
   background: linear-gradient(
@@ -52,13 +49,14 @@ body {
     #d9d9d9 50%,
     #9e9e9e 80%,
     #646464 100%
-)}
+  );
+}
 
 .texto-secundario {
-  max-width: 80rem;
+  max-width: 90%; // antes 80rem → ahora flexible
   text-align: center;
-  margin: 0 auto 4rem;
-  font-size: 1.2rem;
+  margin: 0 auto 4em; // antes 4rem → ahora relativo
+  font-size: 1.2rem; // tipografía en rem
   line-height: 1.6;
   color: var(--text-color);
 }

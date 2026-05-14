@@ -1,14 +1,14 @@
 .por-que-elegirnos {
-  padding: 2rem 2rem;
-  margin: 2rem;
+  padding: 2em; // antes 2rem
+  margin: 2em;  // antes 2rem
   text-align: center;
   border-top: 2px solid var(--text-color);
 
   h2 {
     color: #1e3a5f;
-    font-size: 2rem;
+    font-size: 2rem; // tipografía en rem
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 2em; // antes 2rem
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
   .bloques {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 3em; // antes 4rem
     flex-wrap: wrap;
   }
 
@@ -25,8 +25,9 @@
     background-color: #ffffff71;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 320px;
+    padding: 2em; // antes 2rem
+    width: 90%; // antes 320px → flexible
+    max-width: 20em; // límite relativo
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -37,11 +38,11 @@
 
     h3 {
       color: #1e3a5f;
-      font-size: 1.2rem;
+      font-size: 1.2rem; // tipografía en rem
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 1em; // antes 1rem
       border-bottom: 2px solid #4a6fa5;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.5em; // antes 0.5rem
     }
 
     ul {
@@ -50,9 +51,9 @@
 
       li {
         color: #333;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.6em; // antes 0.6rem
         position: relative;
-        padding-left: 1.2rem;
+        padding-left: 1.2em; // antes 1.2rem
 
         &::before {
           content: "•";
@@ -66,11 +67,49 @@
 }
 
 .logoabout {
-    width:15%;
+  width: 15%; // mantiene %
 }
 
 .tituloapilado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// 📱 Responsive para móviles
+@media screen and (max-width: 768px) {
+  .por-que-elegirnos {
+    padding: 1.5em;
+    margin: 1em;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5em;
+      text-align: center;
+    }
+
+    .bloques {
+      flex-direction: column; // apila los bloques
+      gap: 1.5em;
+    }
+
+    .bloque {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+    }
+
+    .bloque h3 {
+      font-size: 1.1rem;
+    }
+
+    .bloque ul li {
+      text-align: left;
+      font-size: 0.95rem;
+    }
+  }
+
+  .logoabout {
+    width: 40%; // más grande en móviles
+  }
 }

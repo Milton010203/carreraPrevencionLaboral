@@ -1,37 +1,39 @@
 .servicios {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
-  padding: 3rem 2rem;
+  gap: 2em; // antes 2rem → relativo
+  padding: 3em 2em; // antes 3rem 2rem
   margin: 0 auto;
   max-width: 1500px;
+  flex-wrap: wrap; // permite que se acomoden si no hay espacio
 }
 
 .tarjeta {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30rem;
+  height: 28em; // antes 30rem → relativo
   width: 30%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  background-color: #fff;
+  background-color: #e5e5e5;
   transition: transform 0.3s ease;
+
   &:hover {
     transform: translateY(-5px);
   }
 
   .contenido {
-    padding: 1.5rem;
+    padding: 1.5em; // antes 1.5rem
     flex: 1;
 
     h3 {
       color: var(--primary-color);
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 1em; // antes 1rem
       border-bottom: 2px solid #4a6fa5;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.5em; // antes 0.5rem
     }
 
     p {
@@ -42,12 +44,12 @@
 
   .imagen {
     position: relative;
-    height: 40%;
+    height: 45%;
     overflow: hidden;
 
     img {
       width: 100%;
-      height: 100%;
+      height: 106%;
       object-fit: cover;
     }
     
@@ -56,9 +58,30 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.4), transparent),
-      linear-gradient(to bottom, rgba(255,255,255,0.9), transparent);
+                  linear-gradient(to bottom, rgba(229, 229, 229, 1), transparent);
     }
   }
 }
 
+// 📱 Ajustes responsive para móviles
+@media screen and (max-width: 768px) {
+  .servicios {
+    flex-direction: column; // apila las tarjetas
+    align-items: center;
+    gap: 1.5em;
+    padding: 2em 1em;
+  }
 
+  .tarjeta {
+    width: 90%;   // ocupa casi todo el ancho
+    height: auto; // deja que se ajuste al contenido
+  }
+
+  .tarjeta .contenido h3 {
+    font-size: 1.2rem; // tipografía más chica en móviles
+  }
+
+  .tarjeta .contenido p {
+    font-size: 1rem;
+  }
+}

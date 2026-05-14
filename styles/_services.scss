@@ -1,41 +1,43 @@
 .services {
-  padding: 2rem 2rem;
+  padding: 2em; // antes 2rem → relativo
   text-align: center;
-  h1, h3{
-      h1{
-        font-size: 2rem;
-      }
-      margin-bottom: 1rem;
-      font-weight: 400;
+
+  h1, h3 {
+    h1 {
+      font-size: 2rem; // tipografía en rem
     }
+    margin-bottom: 1em; // antes 1rem
+    font-weight: 400;
+  }
 
   .service-list {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
-    gap: 12rem;
-    max-width: 1200px;
+    gap: 8%; // antes 12rem → ahora proporcional
+    max-width: 90%; // antes 1200px → flexible
     margin: auto;
+    flex-wrap: wrap; // permite que se acomoden si no hay espacio
   }
 
   .service {
     flex: 1;
-    max-width: 50rem;
+    max-width: 80%; // antes 50rem → flexible
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   
-  .icon{
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
+  .icon {
+    width: 5em; // antes 80px
+    height: 5em; // antes 80px
+    margin-bottom: 1em; // antes 1rem
   }
 
   .btn {
-    margin-top: 2rem;
-    padding: 0.8rem 1.5rem;
+    margin-top: 2em; // antes 2rem
+    padding: 0.8em 1.5em; // antes en rem
     background: var(--primary-color);
     color: #fff;
     border-radius: var(--border-radius);
@@ -44,8 +46,33 @@
     font-weight: bold;
     transition: transform 0.3s ease, background 0.3s ease;
   }
+
   .btn:hover {
     transform: scale(1.05);
     background: var(--hover-color);
+  }
+}
+
+// 📱 Responsive para móviles
+@media screen and (max-width: 768px) {
+  .service-list {
+    flex-direction: column; // apila las tarjetas
+    gap: 2em;
+    max-width: 100%;
+  }
+
+  .service {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .icon {
+    width: 4em;
+    height: 4em;
+  }
+
+  .btn {
+    width: 100%; // botón ocupa todo el ancho
+    font-size: 1rem;
   }
 }
