@@ -1,6 +1,45 @@
 .footer {
-  background: var(--primary-color);
+  background: var(--colorfooter);
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 1rem;
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #1e3a5f 0%,   // gris oscuro
+    #2c548a 25%,  // gris medio
+    #4b76ad 50%,  // gris claro
+    #3668aa 75%,  // gris plata
+    #2c548a 90%,  // gris muy claro
+    #1e3a5f 100%  // toque azulado para reflejo
+  );
+  background-size: 200% 200%;
+  animation: shine 10s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 105rem;
+  margin-left: 1.5rem;
+}
+.logo-footer {
+  width: 10%;
+  border-right: 2px solid white;
+}
+
+.margenchico {
+  margin: 0.5rem 0rem;
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
 }

@@ -30,7 +30,7 @@
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    border-bottom: 2px solid #4a6fa5;
+    border-bottom: 2px solid var(--text-color);
 
     p {
       flex: 1 1 300px;
@@ -50,7 +50,7 @@
 div>h4 {font-weight: normal; margin-top: 0.5rem;}
 .secciondirector {
   margin-top: var(--spacing-lg);
-  border-bottom: 2px solid #4a6fa5;
+  border-bottom: 2px solid var(--text-color);
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;

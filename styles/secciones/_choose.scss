@@ -1,0 +1,76 @@
+.por-que-elegirnos {
+  padding: 2rem 2rem;
+  margin: 2rem;
+  text-align: center;
+  border-top: 2px solid var(--text-color);
+
+  h2 {
+    color: #1e3a5f;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bloques {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .bloque {
+    background-color: #ffffff71;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 320px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      color: #1e3a5f;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4a6fa5;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        color: #333;
+        margin-bottom: 0.6rem;
+        position: relative;
+        padding-left: 1.2rem;
+
+        &::before {
+          content: "•";
+          color: #4a6fa5;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.logoabout {
+    width:15%;
+}
+
+.tituloapilado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

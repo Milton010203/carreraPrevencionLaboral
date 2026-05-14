@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap");
 :root {
@@ -15,6 +16,7 @@
   --breakpoint-lg: 1024px;
   --cardscolor: #ffffff28;
   --hover-color: #4a6dfa;
+  --colorfooter: #1e3a5f;
 }
 
 .header {
@@ -23,13 +25,26 @@
   left: 0;
   right: 0;
   height: 6rem;
-  background: linear-gradient(to top, rgba(69, 85, 146, 0.959), var(--colornav));
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.9058823529) 0%, rgba(44, 85, 138, 0.8980392157) 25%, rgba(90, 132, 187, 0.8980392157) 50%, rgba(64, 112, 175, 0.8980392157) 75%, rgba(44, 85, 138, 0.9058823529) 90%, rgba(30, 58, 95, 0.9098039216) 100%);
+  background-size: 200% 200%;
+  animation: shine 10s ease-in-out infinite;
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--spacing-md);
   z-index: 1000;
+}
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .header .logo {
   display: flex;
@@ -72,7 +87,7 @@
 }
 
 nav ul li:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 body {
@@ -123,7 +138,7 @@ body {
 }
 
 .services {
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   text-align: center;
 }
 .services h1 h1, .services h3 h1 {
@@ -171,10 +186,46 @@ body {
 }
 
 .footer {
-  background: var(--primary-color);
+  background: var(--colorfooter);
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 1rem;
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  margin: 0;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c548a 25%, #4b76ad 50%, #3668aa 75%, #2c548a 90%, #1e3a5f 100%);
+  background-size: 200% 200%;
+  animation: shine 10s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container {
+  max-width: 105rem;
+  margin-left: 1.5rem;
+}
+
+.logo-footer {
+  width: 10%;
+  border-right: 2px solid white;
+}
+
+.margenchico {
+  margin: 0.5rem 0rem;
+}
+.margenchico a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .carousel {
@@ -290,7 +341,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  border-bottom: 2px solid #4a6fa5;
+  border-bottom: 2px solid var(--text-color);
 }
 .info .columns p {
   flex: 1 1 300px;
@@ -312,7 +363,7 @@ div > h4 {
 
 .secciondirector {
   margin-top: var(--spacing-lg);
-  border-bottom: 2px solid #4a6fa5;
+  border-bottom: 2px solid var(--text-color);
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -384,6 +435,75 @@ div > h4 {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent), linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+}
+
+.por-que-elegirnos {
+  padding: 2rem 2rem;
+  margin: 2rem;
+  text-align: center;
+  border-top: 2px solid var(--text-color);
+}
+.por-que-elegirnos h2 {
+  color: #1e3a5f;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.por-que-elegirnos .bloques {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.por-que-elegirnos .bloque {
+  background-color: rgba(255, 255, 255, 0.4431372549);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 320px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.por-que-elegirnos .bloque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.por-que-elegirnos .bloque h3 {
+  color: #1e3a5f;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4a6fa5;
+  padding-bottom: 0.5rem;
+}
+.por-que-elegirnos .bloque ul {
+  list-style: none;
+  padding: 0;
+}
+.por-que-elegirnos .bloque ul li {
+  color: #333;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.por-que-elegirnos .bloque ul li::before {
+  content: "•";
+  color: #4a6fa5;
+  position: absolute;
+  left: 0;
+}
+
+.logoabout {
+  width: 15%;
+}
+
+.tituloapilado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
