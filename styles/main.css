@@ -135,6 +135,14 @@ nav ul li:hover {
     padding: 1em 0;
   }
 }
+/* Bootstrap solo dentro de este bloque */
+.bootstrap-zone {
+  all: initial; /* resetea estilos heredados */
+}
+.bootstrap-zone * {
+  all: unset; /* opcional: limpia cada elemento */
+}
+
 body {
   font-family: "Outfit", sans-serif;
   font-weight: 400;

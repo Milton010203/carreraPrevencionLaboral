@@ -130,3 +130,10 @@ nav ul li:hover {
   }
 }
 
+/* Bootstrap solo dentro de este bloque */
+.bootstrap-zone {
+  all: initial; /* resetea estilos heredados */
+  * {
+    all: unset; /* opcional: limpia cada elemento */
+  }
+}

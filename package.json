@@ -6,12 +6,17 @@
   "scripts": {
     "build-css": "sass styles/main.scss styles/main.css",
     "watch-css": "sass --watch styles/main.scss styles/main.css",
-    "build:css": "sass styles/main.scss styles/main.css && postcss styles/main.css -o styles/main.css"
+    "build:css": "sass styles/main.scss styles/main.css && postcss styles/main.css -o styles/main.css",
+    "build-nav": "sass --load-path=node_modules styles/bootstrap-nav.scss styles/bootstrap-nav.css"
   },
   "author": "Milton",
   "license": "MIT",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
+    "postcss-cli": "^11.0.1",
     "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }

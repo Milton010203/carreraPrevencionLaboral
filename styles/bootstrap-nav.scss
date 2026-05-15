@@ -1,0 +1,13 @@
+// styles/bootstrap-nav.scss
+
+// Base de Bootstrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";       // <-- agrega esto
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";  // depende de maps y variables
+
+// Componentes que realmente usás
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/buttons";
