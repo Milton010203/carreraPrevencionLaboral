@@ -1,5 +1,5 @@
 const slides = document.querySelectorAll('.slide');
-const carouselInner = document.querySelector('.carousel-inner');
+const carouselInner = document.querySelector('.carousel-innerisimo');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const dots = document.querySelectorAll('.dot');

@@ -5,12 +5,13 @@
   "main": "index.html",
   "scripts": {
     "build-css": "sass styles/main.scss styles/main.css",
-    "watch-css": "sass --watch styles/main.scss styles/main.css"
+    "watch-css": "sass --watch styles/main.scss styles/main.css",
+    "build:css": "sass styles/main.scss styles/main.css && postcss styles/main.css -o styles/main.css"
   },
   "author": "Milton",
   "license": "MIT",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
     "sass": "^1.99.0"
   }
 }
-

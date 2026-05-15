@@ -1,15 +1,9 @@
-/* Ajuste general para compensar el header fijo */
-body {
-  padding-top: 5em; // igual a la altura del header
-  overflow-x: hidden; // evita scroll horizontal
-}
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5em; // compacto
+  height: 5em; // más compacto
   background: linear-gradient(
     135deg,
     #1e3a5fe7 0%,
@@ -28,24 +22,17 @@ body {
   padding: 0 1em;
   z-index: 1000;
 
-  @keyframes shine {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.5rem; // más chico
     width: auto;
-    max-width: 80px; // logo chico
-    height: auto;
+    min-width: 80px;
   }
 
   .nav {
     ul {
       display: flex;
       list-style: none;
-      gap: 1em; // reducido para evitar overflow
+      gap: 2em;
       padding: 0;
       margin: 0;
     }
@@ -61,21 +48,23 @@ body {
 
   /* Botón hamburguesa */
   .hamburger {
-    display: none; // oculto en desktop
+    display: none; /* oculto en desktop */
     flex-direction: column;
+    justify-content: center;
     cursor: pointer;
 
     span {
       height: 3px;
       width: 25px;
-      background: #fff;
+      background: #fff; /* color visible */
       margin: 4px 0;
+      border-radius: 2px;
       transition: 0.4s;
     }
   }
 }
 
-/* Responsive para móviles */
+// 📱 Responsive para móviles
 @media screen and (max-width: 768px) {
   .header {
     height: auto;
@@ -85,7 +74,6 @@ body {
 
   .header .logo {
     font-size: 1.2rem;
-    max-width: 60px; // aún más chico en mobile
   }
 
   .header .nav ul {
@@ -101,10 +89,52 @@ body {
   }
 
   .header .nav ul.active {
-    display: flex; // se muestra al activar con JS
+    display: flex; // se muestra al activar
   }
 
   .header .hamburger {
     display: flex; // aparece en mobile
   }
+}
+
+.header .logo {
+  max-width: 80px; // logo chico en mobile
+  height: auto;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .header .nav ul {
+    display: none; // oculto por defecto
+  }
+  .header .hamburger {
+    display: flex; // aparece en mobile
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .header .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+  }
+}
+
+
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+
+.fondoanimado {
+    background: linear-gradient(
+    135deg,
+    #1e3a5fe7 0%,
+    #2c558ae5 25%,
+    #5a84bbe5 50%,
+    #4070afe5 75%,
+    #2c558ae7 90%,
+    #1e3a5fe8 100%
+  );
+  background-size: 200% 200%;
+  animation: shine 10s ease-in-out infinite;
 }

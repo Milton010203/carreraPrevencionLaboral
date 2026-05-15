@@ -20,6 +20,7 @@
 }
 
 .header {
+  font-family: "Outfit", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +28,7 @@
   height: 6em;
   background: linear-gradient(135deg, rgba(30, 58, 95, 0.9058823529) 0%, rgba(44, 85, 138, 0.8980392157) 25%, rgba(90, 132, 187, 0.8980392157) 50%, rgba(64, 112, 175, 0.8980392157) 75%, rgba(44, 85, 138, 0.9058823529) 90%, rgba(30, 58, 95, 0.9098039216) 100%);
   background-size: 200% 200%;
-  animation: shine 10s ease-in-out infinite;
+  animation: shine 6s ease-in-out infinite;
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
@@ -102,11 +103,36 @@ nav ul li:hover {
   .header .logo {
     width: 100%;
     justify-content: center;
-    margin-bottom: 0.5em;
   }
   .header .nav ul {
     flex-direction: column;
     gap: 1em;
+  }
+}
+/* Por defecto: desktop visible, mobile oculto */
+.nav-desktop {
+  display: flex;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+/* 📱 Mobile */
+@media screen and (max-width: 768px) {
+  .nav-desktop {
+    display: none; /* oculto en mobile */
+  }
+  .nav-mobile {
+    display: flex; /* visible en mobile */
+    flex-direction: column;
+    background: #1e3a5f;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
   }
 }
 body {
@@ -125,7 +151,7 @@ main {
 
 .banner {
   text-align: center;
-  margin: 6em 0;
+  margin: 4em 0;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
@@ -137,7 +163,7 @@ main {
   font-size: 4rem;
   color: var(--text-color);
   font-style: italic;
-  margin: 0;
+  margin-bottom: 6%;
 }
 .banner h3 {
   font-weight: 400;
@@ -175,7 +201,6 @@ body {
 .services .service-list {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 8%;
   max-width: 90%;
   margin: auto;
@@ -194,7 +219,7 @@ body {
   height: 5em;
   margin-bottom: 1em;
 }
-.services .btn {
+.services .buuutn {
   margin-top: 2em;
   padding: 0.8em 1.5em;
   background: var(--primary-color);
@@ -205,7 +230,7 @@ body {
   font-weight: bold;
   transition: transform 0.3s ease, background 0.3s ease;
 }
-.services .btn:hover {
+.services .buuutn:hover {
   transform: scale(1.05);
   background: var(--hover-color);
 }
@@ -224,7 +249,7 @@ body {
     width: 4em;
     height: 4em;
   }
-  .btn {
+  .buuutn {
     width: 100%;
     font-size: 1rem;
   }
@@ -240,7 +265,7 @@ body {
   margin: 0;
   background: linear-gradient(135deg, #1e3a5f 0%, #2c548a 25%, #4b76ad 50%, #3668aa 75%, #2c548a 90%, #1e3a5f 100%);
   background-size: 200% 200%;
-  animation: shine 10s ease-in-out infinite;
+  animation: shine 6s ease-in-out infinite;
 }
 
 @keyframes shine {
@@ -299,7 +324,7 @@ body {
   overflow: hidden;
   border-radius: var(--border-radius);
 }
-.carousel .carousel-inner {
+.carousel .carousel-innerisimo {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -435,7 +460,7 @@ body {
   width: 9em;
   height: 9em;
   border-radius: 50%;
-  margin-top: var(--spacing-md);
+  margin: var(--spacing-md);
 }
 
 div > h4 {
@@ -562,7 +587,6 @@ div > h4 {
   display: flex;
   justify-content: center;
   gap: 3em;
-  flex-wrap: wrap;
 }
 .por-que-elegirnos .bloque {
   background-color: rgba(255, 255, 255, 0.4431372549);
@@ -685,16 +709,12 @@ img, .logo-footer, .info-logo {
   }
   .footer {
     flex-direction: column;
-    text-align: center;
     padding: 1.5em;
   }
+  .footer .margenchico {
+    text-align: center;
+  }
 }
-/* Ajuste general para compensar el header fijo */
-body {
-  padding-top: 5em;
-  overflow-x: hidden;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -711,27 +731,15 @@ body {
   padding: 0 1em;
   z-index: 1000;
 }
-@keyframes shine {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 .header .logo {
   font-size: 1.5rem;
   width: auto;
-  max-width: 80px;
-  height: auto;
+  min-width: 80px;
 }
 .header .nav ul {
   display: flex;
   list-style: none;
-  gap: 1em;
+  gap: 2em;
   padding: 0;
   margin: 0;
 }
@@ -744,19 +752,20 @@ body {
   /* Botón hamburguesa */
 }
 .header .hamburger {
-  display: none;
+  display: none; /* oculto en desktop */
   flex-direction: column;
+  justify-content: center;
   cursor: pointer;
 }
 .header .hamburger span {
   height: 3px;
   width: 25px;
-  background: #fff;
+  background: #fff; /* color visible */
   margin: 4px 0;
+  border-radius: 2px;
   transition: 0.4s;
 }
 
-/* Responsive para móviles */
 @media screen and (max-width: 768px) {
   .header {
     height: auto;
@@ -765,7 +774,6 @@ body {
   }
   .header .logo {
     font-size: 1.2rem;
-    max-width: 60px;
   }
   .header .nav ul {
     display: none;
@@ -784,6 +792,36 @@ body {
   .header .hamburger {
     display: flex;
   }
+}
+.header .logo {
+  max-width: 80px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .header .nav ul {
+    display: none;
+  }
+  .header .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .header .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+  }
+}
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+
+.fondoanimado {
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.9058823529) 0%, rgba(44, 85, 138, 0.8980392157) 25%, rgba(90, 132, 187, 0.8980392157) 50%, rgba(64, 112, 175, 0.8980392157) 75%, rgba(44, 85, 138, 0.9058823529) 90%, rgba(30, 58, 95, 0.9098039216) 100%);
+  background-size: 200% 200%;
+  animation: shine 10s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=main.css.map */

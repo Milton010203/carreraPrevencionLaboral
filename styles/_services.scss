@@ -13,7 +13,6 @@
   .service-list {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
     gap: 8%; // antes 12rem → ahora proporcional
     max-width: 90%; // antes 1200px → flexible
     margin: auto;
@@ -35,7 +34,7 @@
     margin-bottom: 1em; // antes 1rem
   }
 
-  .btn {
+  .buuutn {
     margin-top: 2em; // antes 2rem
     padding: 0.8em 1.5em; // antes en rem
     background: var(--primary-color);
@@ -47,7 +46,7 @@
     transition: transform 0.3s ease, background 0.3s ease;
   }
 
-  .btn:hover {
+  .buuutn:hover {
     transform: scale(1.05);
     background: var(--hover-color);
   }
@@ -71,7 +70,7 @@
     height: 4em;
   }
 
-  .btn {
+  .buuutn {
     width: 100%; // botón ocupa todo el ancho
     font-size: 1rem;
   }

@@ -17,7 +17,7 @@ main {
 
 .banner {
   text-align: center;
-  margin: 6em 0; // antes estaba en rem → ahora relativo al propio texto
+  margin: 4em 0; // antes estaba en rem → ahora relativo al propio texto
   font-family: 'Noto Sans', sans-serif;
   font-weight: 300;
   font-size: 1.5rem; // mantenemos rem para tipografía
@@ -29,7 +29,7 @@ main {
     font-size: 4rem; // tipografía sigue en rem
     color: var(--text-color);
     font-style: italic;
-    margin: 0;
+    margin-bottom: 6%;
   }
   h3 {
     font-weight: 400;

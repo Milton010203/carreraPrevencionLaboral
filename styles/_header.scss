@@ -1,6 +1,7 @@
 
 //background: linear-gradient(to top, rgba(69, 85, 146, 0.959), var(--colornav));
 .header {
+  font-family:'Outfit', sans-serif;
   position: fixed;
   top: 0;                  
   left: 0;
@@ -16,7 +17,7 @@
     #1e3a5fe8 100%
   );
   background-size: 200% 200%;
-  animation: shine 10s ease-in-out infinite;
+  animation: shine 6s ease-in-out infinite;
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
@@ -95,7 +96,6 @@ nav ul li:hover {
   .header .logo {
     width: 100%;
     justify-content: center;
-    margin-bottom: 0.5em;
   }
 
   .header .nav ul {
@@ -103,3 +103,30 @@ nav ul li:hover {
     gap: 1em;
   }
 }
+
+/* Por defecto: desktop visible, mobile oculto */
+.nav-desktop {
+  display: flex;
+}
+.nav-mobile {
+  display: none;
+}
+
+/* 📱 Mobile */
+@media screen and (max-width: 768px) {
+  .nav-desktop {
+    display: none; /* oculto en mobile */
+  }
+  .nav-mobile {
+    display: flex; /* visible en mobile */
+    flex-direction: column;
+    background: #1e3a5f;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+}
+

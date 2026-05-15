@@ -30,7 +30,12 @@ img, .logo-footer, .info-logo {
 
   .footer {
     flex-direction: column;
-    text-align: center;
     padding: 1.5em;
+    .margenchico {
+      text-align: center;
+    }
   }
 }
+
+
+
