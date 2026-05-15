@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5em;
+  padding: 0 3em;
   z-index: 1000;
 
   @keyframes shine {
@@ -125,3 +125,20 @@ nav ul li:hover {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .offcanvas {
+    transition: transform 0.4s ease, opacity 0.4s ease !important;
+  }
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: row;   // organiza los links en columna
+  justify-content: center;  // centra verticalmente
+  align-items: center;      // centra horizontalmente
+  height: 100%;             // ocupa toda la altura del offcanvas
+}
+
+.nav-scope .pe-3 {
+    gap: 3em;
+}

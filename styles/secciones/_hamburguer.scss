@@ -14,12 +14,12 @@
     #1e3a5fe8 100%
   );
   background-size: 200% 200%;
-  animation: shine 5s ease-in-out infinite;
+  animation: shine 6s ease-in-out infinite;
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em;
+  padding: 0 3em;
   z-index: 1000;
 
   .logo {

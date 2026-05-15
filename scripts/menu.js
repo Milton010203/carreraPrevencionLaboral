@@ -1,19 +1,23 @@
-// menu.js
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".header .nav ul");
+// Seleccionamos el offcanvas por su ID
+const offcanvasElement = document.getElementById('offcanvasDarkNavbar');
 
-  // Toggle menú al hacer click en el botón hamburguesa
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    hamburger.classList.toggle("open");
-  });
+// Creamos la instancia de Bootstrap Offcanvas
+const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
 
-  // Cerrar menú al hacer click en un link
-  document.querySelectorAll(".header .nav ul li a").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
-      hamburger.classList.remove("open");
-    });
+// ✅ Cerrar el menú automáticamente al hacer clic en un link
+document.querySelectorAll('.offcanvas-body a').forEach(link => {
+  link.addEventListener('click', () => {
+    offcanvas.hide();
   });
+});
+
+// ✅ Escuchar eventos de apertura y cierre para animaciones extra o debug
+offcanvasElement.addEventListener('show.bs.offcanvas', () => {
+  console.log('El menú se está abriendo...');
+  // Podés agregar aquí clases extra para animaciones personalizadas
+});
+
+offcanvasElement.addEventListener('hidden.bs.offcanvas', () => {
+  console.log('El menú se cerró.');
+  // Podés limpiar clases o estados si lo necesitás
 });
