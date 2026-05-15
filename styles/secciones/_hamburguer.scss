@@ -1,9 +1,15 @@
+/* Ajuste general para compensar el header fijo */
+body {
+  padding-top: 5em; // igual a la altura del header
+  overflow-x: hidden; // evita scroll horizontal
+}
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5em; // más compacto
+  height: 5em; // compacto
   background: linear-gradient(
     135deg,
     #1e3a5fe7 0%,
@@ -22,17 +28,24 @@
   padding: 0 1em;
   z-index: 1000;
 
+  @keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
   .logo {
-    font-size: 1.5rem; // más chico
+    font-size: 1.5rem;
     width: auto;
-    min-width: 80px;
+    max-width: 80px; // logo chico
+    height: auto;
   }
 
   .nav {
     ul {
       display: flex;
       list-style: none;
-      gap: 2em;
+      gap: 1em; // reducido para evitar overflow
       padding: 0;
       margin: 0;
     }
@@ -46,11 +59,12 @@
     }
   }
 
-  // Botón hamburguesa
+  /* Botón hamburguesa */
   .hamburger {
-    display: none;
+    display: none; // oculto en desktop
     flex-direction: column;
     cursor: pointer;
+
     span {
       height: 3px;
       width: 25px;
@@ -61,7 +75,7 @@
   }
 }
 
-// 📱 Responsive para móviles
+/* Responsive para móviles */
 @media screen and (max-width: 768px) {
   .header {
     height: auto;
@@ -71,6 +85,7 @@
 
   .header .logo {
     font-size: 1.2rem;
+    max-width: 60px; // aún más chico en mobile
   }
 
   .header .nav ul {
@@ -86,7 +101,7 @@
   }
 
   .header .nav ul.active {
-    display: flex; // se muestra al activar
+    display: flex; // se muestra al activar con JS
   }
 
   .header .hamburger {
