@@ -4,10 +4,10 @@
   "description": "Proyecto web CARRERA con SCSS",
   "main": "index.html",
   "scripts": {
-    "build-css": "sass styles/main.scss styles/main.css",
-    "watch-css": "sass --watch styles/main.scss styles/main.css",
+    "watch-css": "sass --watch styles/main.scss styles/main.css --quiet-deps & sass --watch styles/bootstrap-nav.scss styles/bootstrap-nav.css --load-path=node_modules --quiet-deps",
+    "build-css": "sass styles/main.scss styles/main.css && postcss styles/main.css -o styles/main.css",
     "build:css": "sass styles/main.scss styles/main.css && postcss styles/main.css -o styles/main.css",
-    "build-nav": "sass --load-path=node_modules styles/bootstrap-nav.scss styles/bootstrap-nav.css"
+    "build-nav": "sass --load-path=node_modules styles/bootstrap-nav.scss styles/bootstrap-nav.css --quiet-deps"
   },
   "author": "Milton",
   "license": "MIT",

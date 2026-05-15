@@ -5,71 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CARRERA - Prevención Laboral</title>
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="/styles/bootstrap-nav.css">
+  <link rel="stylesheet" href="styles/bootstrap-nav.css">
+
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <a href="./index.html">
-        <img class="logo" src="/resources/escudo.png" alt="Logo de CARRERA">
-      </a>
-        
-    </div>
-    <nav class="nav nav-desktop">
-      <ul>
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">SERVICIOS</a></li>
-        <li><a href="#">CONTACTO</a></li>
-      </ul>
-    </nav>
+  <div class="nav-scope">
+    <header class="header">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <img src="/resources/escudo.png" alt="Logo de CARRERA">
+        </a>
+      </div>
 
+      <!-- Bloque Desktop -->
+      <div class="nav-desktop">
+        <nav class="nav">
+          <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="#">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
 
+      <!-- Bloque Mobile -->
+      <div class="nav-mobile">
+        <nav class="navbar navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" 
+                    aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="nav-mobile">
-      <nav class="navbar navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end fondoanimado" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Servicios</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contacto</a>
-                </li>
-              </ul>
+            <div class="offcanvas offcanvas-end fondoanimado" tabindex="-1" 
+                id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                <button type="button" class="btn-close btn-close-white" 
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </div>
-    
+        </nav>
+      </div>
+    </header>
+  </div>
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-  </header>
   <main class="contenedor-doble">
     <!-- Banner -->
     <section>
@@ -123,7 +122,7 @@
           </div>
           <div class="slide">
             <img src="/resources/trabajador 1.png" alt="Imagen 3">
-            <div class="caption">“Transformamos seguridad en valor para tu empresa.”</div>
+            <div class="caption">Texto descriptivo de la tercera imagen</div>
           </div>
           <div class="slide">
             <img src="/resources/trabajadores.jpg" alt="Imagen 4">
