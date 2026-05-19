@@ -862,7 +862,7 @@ img, .logo-footer, .info-logo {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.05s ease;
   height: 17rem;
   width: 35rem;
 }
@@ -899,10 +899,10 @@ img, .logo-footer, .info-logo {
   color: #555555;
 }
 .cartaservicio-contenido .cartaservicio-texto {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.3;
   color: #5e5e5e;
-  margin-bottom: 0.4rem;
+  margin: 0rem;
 }
 .cartaservicio-contenido .cartaservicio-fecha {
   font-size: 0.75rem;
@@ -967,15 +967,38 @@ img, .logo-footer, .info-logo {
     font-size: 1.3rem;
   }
 }
-@media screen and (max-width: 768px) {
-  .cartaservicio-detalle {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+.cartaservicio-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.cartaservicio-card .cartaservicio-detalle {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  padding: 0 1rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-top: 1px solid #333;
+}
+.cartaservicio-card.activo .cartaservicio-detalle {
+  max-height: 500px;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .cartaservicio-card .cartaservicio-detalle {
+    max-height: none;
+    opacity: 1;
+    padding: 0.5rem 2rem 0rem 0rem;
   }
-  .cartaservicio-card.activo .cartaservicio-detalle {
-    max-height: 500px;
-  }
+}
+.cartaservicio-texto {
+  padding-left: 1.2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
