@@ -38,12 +38,11 @@
     }
   }
 }
-
 .director-photo {
-  width: 9em;   // antes 150px
-  height: 9em;  // antes 150px
-  border-radius: 50%;
-  margin: var(--spacing-md);
+  width: 10em;   // antes 150px
+  height: 13.4em;  // antes 150px
+  border-radius: 15%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7);
 }
 
 div > h4 {

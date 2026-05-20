@@ -476,10 +476,10 @@ body {
 }
 
 .director-photo {
-  width: 9em;
-  height: 9em;
-  border-radius: 50%;
-  margin: var(--spacing-md);
+  width: 10em;
+  height: 13.4em;
+  border-radius: 15%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7);
 }
 
 div > h4 {
