@@ -1,0 +1,35 @@
+.cliente-logo{
+    width: 13%;
+}
+
+.container-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-confian{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 20rem;
+    padding: 1rem;
+    border-bottom: 2px solid #333;
+}
+
+@media screen and (max-width: 768px) {
+    .cliente-logo {
+        width: 27%;
+        margin: 0.5em;
+    }
+
+    .titulo-confian {
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+
+    .container-img {
+        gap: 1rem;
+    }
+    
+}

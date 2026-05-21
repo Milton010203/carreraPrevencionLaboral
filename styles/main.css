@@ -863,7 +863,7 @@ img, .logo-footer, .info-logo {
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.05s ease;
-  height: 17rem;
+  height: auto;
   width: 35rem;
 }
 .cartaservicio-card:hover {
@@ -999,6 +999,39 @@ img, .logo-footer, .info-logo {
 }
 .cartaservicio-texto {
   padding-left: 1.2rem;
+}
+
+.cliente-logo {
+  width: 13%;
+}
+
+.container-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-confian {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem 20rem;
+  padding: 1rem;
+  border-bottom: 2px solid #333;
+}
+
+@media screen and (max-width: 768px) {
+  .cliente-logo {
+    width: 27%;
+    margin: 0.5em;
+  }
+  .titulo-confian {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  .container-img {
+    gap: 1rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
